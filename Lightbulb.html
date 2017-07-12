@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <title>Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body> 
+        <ul class="nav">
+           <li><a href="About Me.html">About Me</a></li>
+           <li><a href="Entreprenuer.html">Entreprenuer</a></li>
+           <li><a href="Lightbulb.html">Lightbulb Challenge</a></li>
+           <li><a href="Journals.html">Blogs/jouranls</a></li>
+           <li><a href="googlemaps.html">API Challenge</a></li>
+        </ul>
+<div class="main_container">
+	<style>
+body {
+    background: #ffffff url(http://img02.deviantart.net/805b/i/2005/246/5/8/dragon_wallpaper_by_malvs777.jpg) no-repeat right top;
+}	
+</style>
+
+<p align="middle"><img id="lightbulb" onmouseover="changeImage(this)" src="./pic_bulboff.gif" onmouseout="resetImg(this)" src="./pic_bulbon.gif"></p>
+<p><img id="wand" onmouseover="changeImage(this)" src="./wand.png" onmouseout="resetImg(this)" src="./wand.png"> <img id="wizard" onmouseover="changeImage(this)" src="./patronus.png" onmouseout="resetImg(this)" src="./patronus.png">
+ <img id="wizard" onmouseover="changeImage(this)" src="./patronus2.png" onmouseout="resetImg(this)" src="./patronus2.png"></p>
+<p><img id="wizard" onmouseover="changeImage(this)" src="./wizard.png" onmouseout="resetImg(this)" src="./wizard.png"></p>
+<script>
+ $(document).ready(function(){
+   $("#lightbulb").mouseover(function(){
+     $("#lightbulb").attr("src","./pic_bulbon.gif");
+     $('#wand').animate({
+         width: "30%",
+         transform: 'rotate(' + 100 + 'deg)',
+       }, 1000 );
+   });
+
+ $("#lightbulb").mouseout(function(){
+     $("#lightbulb").attr("src","./pic_bulboff.gif");
+     $('#wand').animate({
+         width: "100px",
+         transform: 'rotate(' + 300 + 'deg)',
+       }, 1000 );
+ });
+  })
+ </script>
+<p style="color:#FF0000";>hover the light bulb to turn on the light.</p>
+
+<script>
+function changeImage() {
+    var image = document.getElementById('myImage');
+    if (image.src.match("bulbon")) {
+        image.src = "pic_bulboff.gif";
+    } else {
+        image.src = "pic_bulbon.gif";
+    }
+}
+</script> 
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js">
+</script>
+</body> 
+</html>

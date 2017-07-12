@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <title>Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+        <ul class="nav">
+           <li><a href="About Me.html">About Me</a></li>
+           <li><a href="Entreprenuer.html">Entreprenuer</a></li>
+           <li><a href="Lightbulb.html">Lightbulb Challenge</a></li>
+           <li><a href="Journals.html">Blogs/jouranls</a></li>
+           <li><a href="googlemaps.html">API Challenge</a></li>
+        </ul>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+
+<div id="container">
+ <div id="header">
+   <h1>Danny's Maps</h1>
+   </div>
+ 
+
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 34.030997, lng: -118.319894};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVslykDWNSDSy4N3anSG-WOgz1WPtkAVY&callback=initMap">
+    </script>
+  </body>
+</html>
